@@ -1,66 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário numérico</title>
-    <style>
-        h1 {
-            display: block;
-            font-size: 2em;
-            margin-block-start: 0.67em;
-            margin-block-end: 0.67em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        body {
-            font: normal 10pt Arial;
-         }
-        input {
-            font: normal 10pt Arial;
-            margin-top: 10px;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário </title>
 
-        }
-
-        .invalid {
-            color: red;
-            font-weight: bold;
-            
-        }
-
-        .valid {
-            color: blue;
-            font-weight: bold;
-        }
-    </style>
-
-    
-    
+<html>
+<head>
+  <title>Formulário</title>
+  <style>
+    .mensagem {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <h1> Análise operador relacional</h1>
-    <input type="number" name="NumA" id="NumA"> <
-    <input type= "number" name="NumB" id="NumB">
-    <div><input type="button" value="comparar" onclick="comparar()"></div>
-    <p id="concl"> <strong>Resultado</strong></p>
+  <form id="meuFormulario">
+    <label for="campoA">Campo A:</label>
+    <input type="number" id="campoA" name="campoA" required>
+    <br>
+    <label for="campoB">Campo B:</label>
+    <input type="number" id="campoB" name="campoB" required>
+    <br>
+    <button type="submit">Submeter</button>
+  </form>
+
+  <div id="resultado" class="mensagem"></div>
+
+  <script src="script.js"></script>
 </body>
-<script>
-    
-    function comparar (){
-        var na = window.document.querySelector('input#NumA')
-        var nb = window.document.querySelector('input#NumB')
-        var res = window.document.querySelector('p#concl')
-        nba = Number(na.value)
-        nbb = Number(nb.value)
-            if (nba > nbb) {
-            res.innerHTML = `Formulário'<span class='invalid'> INVÁLIDO <span>`}
-            else {
-            res.innerHTML = `Formulário <span class='valid'> VÁLIDO <span>`
-            }
-    }
-
-</script>
-
 </html>
