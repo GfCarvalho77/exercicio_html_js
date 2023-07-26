@@ -34,6 +34,14 @@
             color: blue;
             font-weight: bold;
         }
+        #simbol{
+            font: normal 14pt Arial;
+            margin-top: 15px;
+        }
+        input{
+            width: 100px;
+        }
+
     </style>
 
     
@@ -41,8 +49,8 @@
 </head>
 <body>
     <h1> Análise operador relacional</h1>
-    <input type="number" name="NumA" id="NumA"> <
-    <input type= "number" name="NumB" id="NumB">
+    <strong>Campo A:</strong>  <input type="number" name="NumA" id="NumA"> <span id="simbol"> <strong> < </strong> </span> 
+    <strong> campo B: </strong> <input type= "number" name="NumB" id="NumB">
     <div><input type="button" value="comparar" onclick="comparar()"></div>
     <p id="concl"> <strong>Resultado</strong></p>
 </body>
@@ -55,9 +63,9 @@
         nba = Number(na.value)
         nbb = Number(nb.value)
             if (nba > nbb) {
-            res.innerHTML = `Formulário'<span class='invalid'> INVÁLIDO <span>`}
+            res.innerHTML = `<strong>Formulário'</strong><span class='invalid'> INVÁLIDO <span>`}
             else {
-            res.innerHTML = `Formulário <span class='valid'> VÁLIDO <span>`
+            res.innerHTML = `<strong>Formulário'</strong> <span class='valid'> VÁLIDO <span>`
             }
     }
 
